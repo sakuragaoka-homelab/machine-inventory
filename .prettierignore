@@ -1,0 +1,3 @@
+# README.md contains a generated table that `just render` owns; the Markdown
+# formatter would re-pad it and make `just render-check` fail.
+README.md

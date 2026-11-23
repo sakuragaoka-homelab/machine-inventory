@@ -1,0 +1,8 @@
+# pr-automerge.yml intentionally uses workflow_run and pull_request_target:
+# it must read check runs on the head commit and label Dependabot pull requests
+# without checking out untrusted code. It never runs repository code from the
+# triggering pull request, so the trigger is the documented Free-plan design.
+rules:
+  dangerous-triggers:
+    ignore:
+      - pr-automerge.yml

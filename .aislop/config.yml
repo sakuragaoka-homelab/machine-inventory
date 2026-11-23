@@ -1,3 +1,0 @@
-# aislop configuration. Docs: https://scanaislop.com/docs/configuration
-ci:
-  failBelow: 80

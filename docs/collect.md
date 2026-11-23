@@ -15,16 +15,16 @@ writes `machines/<id>.json`.
 
 Parameters:
 
-| Parameter | Default | Does |
-| --- | --- | --- |
-| `-Id` | `$env:SIMPSONM09_MACHINE_ID` | The record id. Required. |
-| `-Role` | `workstation` | `workstation`, `server`, or `runner`. |
+| Parameter       | Default                           | Does                                      |
+| --------------- | --------------------------------- | ----------------------------------------- |
+| `-Id`           | `$env:SIMPSONM09_MACHINE_ID`      | The record id. Required.                  |
+| `-Role`         | `workstation`                     | `workstation`, `server`, or `runner`.     |
 | `-StorageClass` | `$env:SIMPSONM09_MACHINE_PROFILE` | `storage-ample` or `storage-constrained`. |
-| `-Gpu` | detected | `none`, `integrated`, or `discrete`. |
-| `-AlwaysOn` | off | Marks the machine as always on. |
-| `-Notes` | none | A short non-identifying note. |
-| `-Write` | off | Writes the record instead of printing it. |
-| `-OutDir` | `machines` | The output directory. |
+| `-Gpu`          | detected                          | `none`, `integrated`, or `discrete`.      |
+| `-AlwaysOn`     | off                               | Marks the machine as always on.           |
+| `-Notes`        | none                              | A short non-identifying note.             |
+| `-Write`        | off                               | Writes the record instead of printing it. |
+| `-OutDir`       | `machines`                        | The output directory.                     |
 
 The collector refuses to run without an `-Id`. It detects CPU cores and threads
 from `Win32_Processor`, the RAM tier from `Win32_ComputerSystem` with total

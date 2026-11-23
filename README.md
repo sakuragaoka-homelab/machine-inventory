@@ -1,10 +1,10 @@
 # machine-inventory
 
-Machine-class inventory for the `simpsonm09-projects` fleet.
+Machine-class inventory for the `sakuragaoka-homelab` fleet.
 
-This repository lives in `simpsonm09-projects/machine-inventory`. Work happens on a branch
-with a pull request into `main`.
-See [`repo-standard`](https://github.com/simpsonm09-projects/repo-standard)
+This repository lives in `sakuragaoka-homelab/machine-inventory`. Work happens on a branch
+with a pull request into `main`; the merge is a squash merge.
+See [the owner standard](https://github.com/sakuragaoka-homelab/.github/blob/main/standards/owner.md)
 for the branch model and the protection rules.
 
 ## What it does
@@ -31,15 +31,15 @@ just verify
 
 ## Commands
 
-| Command | Does |
-| --- | --- |
-| `just install` | Installs the pinned tools. |
-| `just lint` | Runs the linters. |
-| `just render` | Rewrites the machine table above from `machines/*.json`. |
-| `just render-check` | Fails when the machine table is stale. |
-| `just collect` | Collects a machine record on Windows. |
-| `just test` | Validates the records and the rendered table. |
-| `just verify` | Lints and tests. |
+| Command             | Does                                                     |
+| ------------------- | -------------------------------------------------------- |
+| `just install`      | Installs the pinned tools.                               |
+| `just lint`         | Runs the linters and workflow checks.                    |
+| `just render`       | Rewrites the machine table above from `machines/*.json`. |
+| `just render-check` | Fails when the machine table is stale.                   |
+| `just collect`      | Collects a machine record on Windows.                    |
+| `just test`         | Validates the records and the rendered table.            |
+| `just verify`       | Runs `just check` and `just test`.                       |
 
 ## Documentation
 
@@ -51,4 +51,4 @@ MIT. See [`LICENSE`](LICENSE).
 
 ## Related repositories
 
-- [`repo-standard`](https://github.com/simpsonm09-projects/repo-standard) owns the shared CI, linting, security, and governance.
+- [the owner standard](https://github.com/sakuragaoka-homelab/.github/blob/main/standards/owner.md) defines the shared workflow, checks and toolchain.

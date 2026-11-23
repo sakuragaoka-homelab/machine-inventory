@@ -1,3 +1,4 @@
+#!/bin/sh
 # platforms: posix
 # Collects one machine record as JSON on Linux or WSL, using classes, counts,
 # and buckets only. It never reads the hostname, the user, or a mount path.
