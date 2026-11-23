@@ -18,8 +18,11 @@ procedures.
 
 `just --list` shows every recipe. `just check` runs the non-test gates and `just test` validates
 and tests the inventory. `just render` rewrites the README table and `just render-check` fails when
-it is stale. `just hooks` installs the repository-local guards and `just agent-files` verifies the
-skill links.
+it is stale. `just hooks` installs the shared Lefthook hooks in `.git/hooks`; it migrates a local
+`core.hooksPath=.githooks` and refuses any other value. `just agent-files` verifies the skill links.
+
+Hooks load the shared jobs from `sakuragaoka-homelab/.github` at the `hooks-v2` tag. Agents never
+bypass them (C7.11): no `LEFTHOOK=0`, no `git commit --no-verify`, and no `lefthook-local.yml`.
 
 ## Invariants
 
