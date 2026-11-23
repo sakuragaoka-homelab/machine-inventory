@@ -21,7 +21,7 @@ and tests the inventory. `just render` rewrites the README table and `just rende
 it is stale. `just hooks` installs the shared Lefthook hooks in `.git/hooks`; it migrates a local
 `core.hooksPath=.githooks` and refuses any other value. `just agent-files` verifies the skill links.
 
-Hooks load the shared jobs from `sakuragaoka-homelab/.github` at the `hooks-v2` tag. Agents never
+Hooks load the shared jobs from `sakuragaoka-homelab/.github` at the `hooks-v3` tag. Agents never
 bypass them (C7.11): no `LEFTHOOK=0`, no `git commit --no-verify`, and no `lefthook-local.yml`.
 
 ## Invariants
