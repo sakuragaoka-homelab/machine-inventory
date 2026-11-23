@@ -29,7 +29,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Format check
         run: just fmt-check
 
@@ -43,7 +43,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Lint
         run: just lint
 
@@ -57,7 +57,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Test
         run: just test
 
@@ -72,7 +72,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Privacy and secret checks
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
@@ -89,7 +89,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Fetch the shared hook config
         # `install` is what fetches the public `hooks-v3` tag into
         # `.git/info/lefthook-remotes`; `validate` alone silently skips remotes.
@@ -117,6 +117,6 @@ jobs:
         with:
           persist-credentials: false
       - name: Install pinned tools
-        uses: jdx/mise-action@9b200bcecbfd6303e69a4a261b2e09e3757440a7 # v5.2.0
+        uses: jdx/mise-action@90f833d396d0cc3674b631d2d225e306476c303a # v5.2.10
       - name: Full test suite
         run: just test-full
