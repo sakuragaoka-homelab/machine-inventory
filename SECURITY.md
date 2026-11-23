@@ -6,11 +6,10 @@ Report a suspected vulnerability privately through GitHub's security advisory fo
 
 ## What is scanned
 
-- Trivy scans the filesystem for vulnerable dependencies, hardcoded secrets, and misconfiguration.
-- A dedicated secret scanner scans the full git history for credentials.
-- aislop flags risky patterns alongside AI-slop findings.
-- Dependabot keeps action and dependency pins current.
+- `just check` runs the privacy scanner over the worktree and the staged blobs.
+- `gitleaks` scans the pushed range or pull-request diff; `just history` scans every published ref locally.
+- Dependabot keeps action pins current.
 
 ## Secrets
 
-No secret is committed to this repository or to the repositories it governs. Configuration references secrets by environment variable name, and the value comes from the secrets manager. See the [`dev-setup`](https://github.com/simpsonm09-projects/dev-setup) repository for the secrets manager setup.
+No secret is committed to this repository or to the repositories it governs. Configuration references secrets by environment variable name; the value stays outside Git.

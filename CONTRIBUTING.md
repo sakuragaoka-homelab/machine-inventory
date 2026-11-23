@@ -8,8 +8,8 @@
 ## Pull requests
 
 - Open the pull request against `main`.
-- Required checks are the lint, aislop, security, and standard jobs, plus any test job the repository adds. Keep them green.
-- Merge, squash, and rebase are all allowed. Delete the branch after merge.
+- Required checks are `fmt`, `lint`, `test` and `privacy` from the `Checks` workflow. Keep them green.
+- Pull requests are squash-merged with zero approving reviews. Delete the branch after merge.
 
 ## Commits
 
@@ -17,4 +17,4 @@ Commits on a branch must be signed. The standard requires signed commits on `mai
 
 ## Scope
 
-Keep changes inside the repository's purpose. Do not commit secrets or machine-specific paths. The [`repo-standard` governance doc](https://github.com/simpsonm09-projects/repo-standard/blob/main/docs/governance.md) defines the branch model and the protection rules.
+Keep changes inside the repository's purpose. Do not commit secrets or machine-specific paths. [The owner standard](https://github.com/sakuragaoka-homelab/.github/blob/main/standards/owner.md) defines the branch model and the protection rules.

@@ -1,18 +1,26 @@
-# Dependency updates come from Dependabot. Dependabot has no shareable preset, so
-# this file lives in each repository. Keep the shape the standard checks. See
-# docs/automation.md.
-
+# Dependabot keeps pinned actions and declared dependencies current. Minor and
+# patch updates are grouped per ecosystem and merge automatically once every
+# check on the exact head commit passes. Major updates open their own pull
+# request, carry the `major-update` label, and wait for owner review.
 version: 2
+
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "monday"
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: "chore(deps)"
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Etc/UTC
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+      semver-minor-days: 7
+      semver-patch-days: 3
     groups:
-      non-major:
+      github-actions:
         patterns: ["*"]
         update-types: ["minor", "patch"]
+    labels: ["dependencies"]
+    commit-message:
+      prefix: "chore(actions)"
